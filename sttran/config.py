@@ -2,28 +2,34 @@ from argparse import ArgumentParser
 
 BATCHNORM_MOMENTUM = 0.01
 
-class Config(object):
+class Config():
     """Wrapper class for model hyperparameters."""
 
-    def __init__(self):
+    def __init__(self, mode='predcls', save_path='data/', model_path='', datasize='large',
+                 data_path='/data/scene_understanding/action_genome',
+                 ckpt='checkpoint', optimizer='adamw', lr=1e-5, enc_layer=1, dec_layer=3,
+                 bce_loss=False, nepoch=10, interactive=False):
         """
         Defaults
         """
-        self.mode = None
-        self.save_path = None
-        self.model_path = None
-        self.data_path = None
-        self.datasize = None
-        self.ckpt = None
-        self.optimizer = None
-        self.bce_loss = None
-        self.lr = 1e-5
-        self.enc_layer = 1
-        self.dec_layer = 3
-        self.nepoch = 10
-        self.parser = self.setup_parser()
-        self.args = vars(self.parser.parse_args())
-        self.__dict__.update(self.args)
+        self.mode = mode
+        self.save_path = save_path
+        self.model_path = model_path
+        self.data_path = data_path
+        self.datasize = datasize
+        self.ckpt = ckpt
+        self.optimizer = optimizer
+        self.bce_loss = bce_loss
+        self.lr = lr
+        self.enc_layer = enc_layer
+        self.dec_layer = dec_layer
+        self.nepoch = nepoch
+
+        self.interactive = interactive
+        if not self.interactive:
+            self.parser = self.setup_parser()
+            self.args = vars(self.parser.parse_args())
+            self.__dict__.update(self.args)
 
     def setup_parser(self):
         """

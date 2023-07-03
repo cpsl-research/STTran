@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import numpy as np
 from functools import reduce
-from lib.ults.pytorch_misc import intersect_2d, argsort_desc
-from lib.fpn.box_intersections_cpu.bbox import bbox_overlaps
+from sttran.ults.pytorch_misc import intersect_2d, argsort_desc
+from sttran.fpn.box_intersections_cpu.bbox import bbox_overlaps
 
 class BasicSceneGraphEvaluator:
     def __init__(self, mode, AG_object_classes, AG_all_predicates, AG_attention_predicates, AG_spatial_predicates, AG_contacting_predicates,

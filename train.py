@@ -10,11 +10,11 @@ import pandas as pd
 import copy
 
 from dataloader.action_genome import AG, cuda_collate_fn
-from lib.object_detector import detector
-from lib.config import Config
-from lib.evaluation_recall import BasicSceneGraphEvaluator
-from lib.AdamW import AdamW
-from lib.sttran import STTran
+from sttran.object_detector import detector
+from sttran.config import Config
+from sttran.evaluation_recall import BasicSceneGraphEvaluator
+from sttran.AdamW import AdamW
+from sttran.sttran import STTran
 
 """------------------------------------some settings----------------------------------------"""
 conf = Config()

@@ -6,11 +6,11 @@ import numpy as np
 import torch
 import torch.nn as nn
 
-from lib.word_vectors import obj_edge_vectors
-from lib.transformer import transformer
-from lib.fpn.box_utils import center_size
+from sttran.word_vectors import obj_edge_vectors
+from sttran.transformer import transformer
+from sttran.fpn.box_utils import center_size
 from fasterRCNN.lib.model.roi_layers import ROIAlign, nms
-from lib.draw_rectangles.draw_rectangles import draw_union_boxes
+from sttran.draw_rectangles.draw_rectangles import draw_union_boxes
 
 
 class ObjectClassifier(nn.Module):

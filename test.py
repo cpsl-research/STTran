@@ -3,12 +3,12 @@ np.set_printoptions(precision=4)
 import copy
 import torch
 
-from dataloader.action_genome import AG, cuda_collate_fn
+from sttran.dataloader.action_genome import AG, cuda_collate_fn
 
-from lib.config import Config
-from lib.evaluation_recall import BasicSceneGraphEvaluator
-from lib.object_detector import detector
-from lib.sttran import STTran
+from sttran.config import Config
+from sttran.evaluation_recall import BasicSceneGraphEvaluator
+from sttran.object_detector import detector
+from sttran.sttran import STTran
 
 conf = Config()
 for i in conf.args:

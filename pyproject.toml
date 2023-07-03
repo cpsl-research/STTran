@@ -1,0 +1,38 @@
+
+[tool.poetry]
+name = "sttran"
+version = "0.1.0-alpha.1"
+description = "Spatial-Temporal Scene Graph Generation"
+authors = ["Yuren Cong", "Spencer Hallyburton"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/yrcong/STTran"
+repository = "https://github.com/cpsl-research/STTran"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+]
+keywords = ["scene graphs"]
+packages = [{include = "sttran"}]
+
+[tool.poetry.dependencies]
+python = "~3.8"
+h5py = "^3.9.0"
+dill = "^0.3.6"
+easydict = "^1.10"
+
+
+[tool.poetry.dev-dependencies]
+jupyter = "^1.0.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q -s -l"
+testpaths = [
+    "tests",
+    "integration",
+]

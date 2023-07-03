@@ -1,9 +1,6 @@
 import torch
-from PIL import Image
 from torch.utils.data import Dataset
-from torchvision.transforms import Resize, Compose, ToTensor, Normalize
-import random
-from scipy.misc import imread
+from imageio import imread
 import numpy as np
 import pickle
 import os

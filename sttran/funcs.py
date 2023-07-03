@@ -1,5 +1,5 @@
 import numpy as np
-from lib.fpn.box_utils import bbox_overlaps
+from sttran.fpn.box_utils import bbox_overlaps
 import cv2
 
 

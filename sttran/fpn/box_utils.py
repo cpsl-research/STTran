@@ -1,8 +1,8 @@
 import torch
 import numpy as np
 from torch.nn import functional as F
-from lib.fpn.box_intersections_cpu.bbox import bbox_overlaps as bbox_overlaps_np
-from lib.fpn.box_intersections_cpu.bbox import bbox_intersections as bbox_intersections_np
+from sttran.fpn.box_intersections_cpu.bbox import bbox_overlaps as bbox_overlaps_np
+from sttran.fpn.box_intersections_cpu.bbox import bbox_intersections as bbox_intersections_np
 
 
 def bbox_loss(prior_boxes, deltas, gt_boxes, eps=1e-4, scale_before=1):
