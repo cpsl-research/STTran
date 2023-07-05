@@ -34,11 +34,19 @@ def obj_edge_vectors(names, wv_type='glove.6B', wv_dir=None, wv_dim=300):
 
     return vectors
 
+# URL = {
+#         'glove.42B': 'http://nlp.stanford.edu/data/glove.42B.300d.zip',
+#         'glove.840B': 'http://nlp.stanford.edu/data/glove.840B.300d.zip',
+#         'glove.twitter.27B': 'http://nlp.stanford.edu/data/glove.twitter.27B.zip',
+#         'glove.6B': 'http://nlp.stanford.edu/data/glove.6B.zip',
+#         }
+
+
 URL = {
-        'glove.42B': 'http://nlp.stanford.edu/data/glove.42B.300d.zip',
-        'glove.840B': 'http://nlp.stanford.edu/data/glove.840B.300d.zip',
-        'glove.twitter.27B': 'http://nlp.stanford.edu/data/glove.twitter.27B.zip',
-        'glove.6B': 'http://nlp.stanford.edu/data/glove.6B.zip',
+        'glove.42B': 'https://huggingface.co/stanfordnlp/glove/resolve/main/glove.42B.300d.zip',
+        'glove.840B': 'https://huggingface.co/stanfordnlp/glove/resolve/main/glove.840B.300d.zip',
+        'glove.twitter.27B': 'https://huggingface.co/stanfordnlp/glove/resolve/main/glove.twitter.27B.zip',
+        'glove.6B': 'https://huggingface.co/stanfordnlp/glove/resolve/main/glove.6B.zip',
         }
 
 

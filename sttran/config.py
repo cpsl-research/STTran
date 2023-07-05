@@ -5,21 +5,24 @@ BATCHNORM_MOMENTUM = 0.01
 class Config():
     """Wrapper class for model hyperparameters."""
 
-    def __init__(self, mode='predcls', save_path='data/', model_path='', datasize='large',
-                 data_path='/data/scene_understanding/action_genome',
-                 ckpt='checkpoint', optimizer='adamw', lr=1e-5, enc_layer=1, dec_layer=3,
+    def __init__(self, mode='predcls', save_path='data/', gpu=0, model_path='', datasize='large',
+                 data_path='/data/scene_understanding/action_genome', wv_dir='/data/scene_understanding/action_genome',
+                 filter_small_box=False, ckpt='checkpoint', optimizer='adamw', lr=1e-5, enc_layer=1, dec_layer=3,
                  bce_loss=False, nepoch=10, interactive=False):
         """
         Defaults
         """
         self.mode = mode
+        self.gpu = gpu
         self.save_path = save_path
         self.model_path = model_path
         self.data_path = data_path
+        self.wv_dir = wv_dir
         self.datasize = datasize
         self.ckpt = ckpt
         self.optimizer = optimizer
         self.bce_loss = bce_loss
+        self.filter_small_box = filter_small_box
         self.lr = lr
         self.enc_layer = enc_layer
         self.dec_layer = dec_layer

@@ -8,7 +8,8 @@ from fasterRCNN.lib.model.utils.blob import prep_im_for_blob, im_list_to_blob
 
 class AG(Dataset):
 
-    def __init__(self, mode, datasize, data_path=None, filter_nonperson_box_frame=True, filter_small_box=False):
+    def __init__(self, mode, datasize, data_path=None,
+                 filter_nonperson_box_frame=True, filter_small_box=False):
 
         root_path = data_path
         self.frames_path = os.path.join(root_path, 'frames/')

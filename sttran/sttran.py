@@ -262,7 +262,7 @@ class ObjectClassifier(nn.Module):
 
 class STTran(nn.Module):
 
-    def __init__(self, mode='sgdet',
+    def __init__(self, mode='sgdet', wv_dir='data/', wv_type='glove.6B',
                  attention_class_num=None, spatial_class_num=None, contact_class_num=None, obj_classes=None, rel_classes=None,
                  enc_layer_num=None, dec_layer_num=None):
 
@@ -297,7 +297,7 @@ class STTran(nn.Module):
         self.obj_fc = nn.Linear(2048, 512)
         self.vr_fc = nn.Linear(256*7*7, 512)
 
-        embed_vecs = obj_edge_vectors(obj_classes, wv_type='glove.6B', wv_dir='/home/cong/Dokumente/neural-motifs-master/data', wv_dim=200)
+        embed_vecs = obj_edge_vectors(obj_classes, wv_type=wv_type, wv_dir=wv_dir, wv_dim=200)
         self.obj_embed = nn.Embedding(len(obj_classes), 200)
         self.obj_embed.weight.data = embed_vecs.clone()
 
