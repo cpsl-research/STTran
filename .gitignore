@@ -2,6 +2,9 @@
 models
 *.pkl
 
+fasterRCNN/lib/build
+fasterRCNN/lib/*egg*
+
 *.pth
 .coverage
 __pycache__/

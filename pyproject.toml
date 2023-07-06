@@ -21,7 +21,6 @@ h5py = "^3.9.0"
 dill = "^0.3.6"
 easydict = "^1.10"
 
-
 [tool.poetry.dev-dependencies]
 jupyter = "^1.0.0"
 
