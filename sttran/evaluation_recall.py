@@ -92,7 +92,7 @@ class BasicSceneGraphEvaluator:
                     'obj_scores': pred['pred_scores'].cpu().clone().numpy(),
                     'rel_scores': np.concatenate((pred_scores_1, pred_scores_2, pred_scores_3), axis=0)
                 }
-
+                
             evaluate_from_dict(gt_entry, pred_entry, self.mode, self.result_dict,
                                iou_thresh=self.iou_threshold, method=self.constraint, threshold=self.semithreshold)
 
